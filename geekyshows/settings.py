@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'A1',
     'celery',
     'T1',
+    'nested_serializer',
 ]
 
 MIDDLEWARE = [
