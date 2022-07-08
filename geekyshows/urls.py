@@ -20,7 +20,7 @@ from rest_framework.routers import DefaultRouter
 from T1 import views
 
 router=DefaultRouter()
-router.register('studentapi',views.EmployeeViewSet,basename='student')
+router.register('studentapi',views.EmployeeModelViewSet,basename='student')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/', include('A1.urls')),
