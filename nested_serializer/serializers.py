@@ -7,10 +7,10 @@ class SongSerializer(serializers.ModelSerializer):
         fields=['id','title','singer','duration']
 
 class SingerSerializer(serializers.ModelSerializer):
-    sungby=SongSerializer(many=True,read_only=True,source='singer')
+    sung_by=SongSerializer(many=True,read_only=True)
     class Meta:
         model=Singer
-        fields=['id','name','gender','sungby']
+        fields=['id','name','gender','sung_by']
 
  
 

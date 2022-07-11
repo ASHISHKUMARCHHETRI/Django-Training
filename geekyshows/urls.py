@@ -19,6 +19,7 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from T1.views import EmployeeModelViewSet
 from nested_serializer import views
+from mixins.views import LCStudent,RUDStudent
 
 router=DefaultRouter()
 router.register('studentapi',EmployeeModelViewSet,basename='student')
@@ -28,6 +29,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/', include('A1.urls')),
     path('',include(router.urls)),
+    path('mixins',LCStudent.as_view()),
+    path('mixinspk/<int:pk>/',RUDStudent.as_view()),
+   
 
 
     

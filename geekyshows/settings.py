@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'celery',
     'T1',
     'nested_serializer',
+    'mixins',
 ]
 
 MIDDLEWARE = [
